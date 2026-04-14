@@ -147,7 +147,7 @@ with tab3:
     
     with col_upload:
         uploaded_file = st.file_uploader("Upload Dermoscopic Image (JPG/PNG)", type=["jpg", "png", "jpeg"])
-        classify_btn = st.button("🔍 Classify Lesion", type="primary", use_container_width=True)
+        classify_btn = st.button("Classify Lesion", type="primary", use_container_width=True)
         
         if uploaded_file is not None:
             st.image(uploaded_file, caption="Uploaded Image", use_container_width=True)

@@ -32,13 +32,13 @@ with tab1:
     st.header("Network Visualization")
     
     # Simulating Hub and Spoke with columns
-    st.markdown("<div style='text-align: center;'><h3>🏢 Global Aggregator Server (HUB)</h3></div>", unsafe_allow_html=True)
-    st.markdown("<div style='text-align: center; color: gray;'>⬇️ Global Model Broadcast &nbsp;&nbsp; | &nbsp;&nbsp; ⬆️ Local Gradients Upload</div><br>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center;'><h3>Global Aggregator Server (HUB)</h3></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; color: gray;'>Global Model Broadcast &nbsp;&nbsp; | &nbsp;&nbsp; Local Gradients Upload</div><br>", unsafe_allow_html=True)
     
     c1, c2, c3, c4 = st.columns(4)
     c1.info("Clinic Node 1\n\n(Local HAM10000 Data)")
-    c2.info("🏥 Clinic Node 2\n\n(Local HAM10000 Data)")
-    c3.info("🏥 Clinic Node 3\n\n(Local HAM10000 Data)")
+    c2.info("Clinic Node 2\n\n(Local HAM10000 Data)")
+    c3.info("Clinic Node 3\n\n(Local HAM10000 Data)")
     
     st.divider()
     

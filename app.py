@@ -21,11 +21,11 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("⚕️ Privacy-Preserving Healthcare AI")
+st.title("Privacy-Preserving Healthcare AI")
 st.caption("Powered by Federated Proximal (FedProx) Optimization")
 
 # --- NAVIGATION TABS ---
-tab1, tab2, tab3 = st.tabs(["🌐 FL Orchestration Hub", "📊 Performance Matrix", "🩺 Diagnostic Portal"])
+tab1, tab2, tab3 = st.tabs(["FL Orchestration Hub", "Performance Matrix", "Diagnostic Portal"])
 
 # --- SCREEN 1: FEDERATED LEARNING ORCHESTRATION HUB ---
 with tab1:
@@ -36,10 +36,9 @@ with tab1:
     st.markdown("<div style='text-align: center; color: gray;'>⬇️ Global Model Broadcast &nbsp;&nbsp; | &nbsp;&nbsp; ⬆️ Local Gradients Upload</div><br>", unsafe_allow_html=True)
     
     c1, c2, c3, c4 = st.columns(4)
-    c1.info("🏥 Hospital Node 1\n\n(Local HAM10000 Data)")
-    c2.info("🏥 Hospital Node 2\n\n(Local HAM10000 Data)")
-    c3.info("🏥 Hospital Node 3\n\n(Local HAM10000 Data)")
-    c4.info("🏥 Hospital Node 4\n\n(Local HAM10000 Data)")
+    c1.info("Clinic Node 1\n\n(Local HAM10000 Data)")
+    c2.info("🏥 Clinic Node 2\n\n(Local HAM10000 Data)")
+    c3.info("🏥 Clinic Node 3\n\n(Local HAM10000 Data)")
     
     st.divider()
     
@@ -47,7 +46,7 @@ with tab1:
     
     with col_btn:
         st.subheader("Control Panel")
-        run_sim = st.button("🚀 Run FedProx Simulation", type="primary")
+        run_sim = st.button("Run FedProx Simulation", type="primary")
         
         st.subheader("Aggregated Metrics")
         m1, m2 = st.columns(2)
@@ -94,7 +93,7 @@ with tab2:
     
     # Federated
     with c1:
-        st.markdown("<div class='dark-metric-card'><h3>🌐 Federated (FedProx)</h3><p>Decentralized & Secure</p></div><br>", unsafe_allow_html=True)
+        st.markdown("<div class='dark-metric-card'><h3>Federated (FedProx)</h3><p>Decentralized & Secure</p></div><br>", unsafe_allow_html=True)
         if st.button("Run Federated Model"):
             with st.spinner('Simulating distributed training...'):
                 time.sleep(2)
@@ -104,7 +103,7 @@ with tab2:
 
     # Localized
     with c2:
-        st.markdown("<div class='metric-card'><h3>🏥 Localized Training</h3><p>Isolated Node Only</p></div><br>", unsafe_allow_html=True)
+        st.markdown("<div class='metric-card'><h3>Localized Training</h3><p>Isolated Node Only</p></div><br>", unsafe_allow_html=True)
         if st.button("Run Local Model"):
             with st.spinner('Simulating local training...'):
                 time.sleep(1.5)
@@ -114,7 +113,7 @@ with tab2:
 
     # Centralized
     with c3:
-        st.markdown("<div class='metric-card'><h3>💾 Centralized Training</h3><p>High Privacy Risk</p></div><br>", unsafe_allow_html=True)
+        st.markdown("<div class='metric-card'><h3>Centralized Training</h3><p>High Privacy Risk</p></div><br>", unsafe_allow_html=True)
         if st.button("Run Centralized Model"):
             with st.spinner('Simulating centralized training...'):
                 time.sleep(2.5)
@@ -142,7 +141,7 @@ with tab3:
             with st.spinner('Analyzing image through global model...'):
                 time.sleep(1.5)
             
-            st.info("🔒 Prediction generated via Privacy-Preserving Federated Model")
+            st.info("Prediction generated via Privacy-Preserving Federated Model")
             st.markdown("### Predicted Class: **Melanocytic Nevi (Benign)**")
             
             # Simulated confidence chart

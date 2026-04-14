@@ -11,7 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for a clean, minimalist medical feel
+# CSS
 st.markdown("""
     <style>
     .stButton>button { width: 100%; font-weight: bold; }

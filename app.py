@@ -103,7 +103,7 @@ with tab2:
 
     # Localized
     with c2:
-        st.markdown("<div class='metric-card'><h3>Localized Training</h3><p>Isolated Node Only</p></div><br>", unsafe_allow_html=True)
+        st.markdown("<div class='dark-metric-card'><h3>Localized Training</h3><p>Isolated Node Only</p></div><br>", unsafe_allow_html=True)
         if st.button("Run Local Model"):
             with st.spinner('Simulating local training...'):
                 time.sleep(1.5)
@@ -113,7 +113,7 @@ with tab2:
 
     # Centralized
     with c3:
-        st.markdown("<div class='metric-card'><h3>Centralized Training</h3><p>High Privacy Risk</p></div><br>", unsafe_allow_html=True)
+        st.markdown("<div class='dark-metric-card'><h3>Centralized Training</h3><p>High Privacy Risk</p></div><br>", unsafe_allow_html=True)
         if st.button("Run Centralized Model"):
             with st.spinner('Simulating centralized training...'):
                 time.sleep(2.5)

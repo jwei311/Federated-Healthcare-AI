@@ -89,6 +89,15 @@ with tab1:
 # --- SCREEN 2: PERFORMANCE MATRIX ---
 with tab2:
     st.header("Comparative Analytics")
+    
+    # Initialize session state variables to remember which models have been run
+    if 'fed_run' not in st.session_state:
+        st.session_state.fed_run = False
+    if 'loc_run' not in st.session_state:
+        st.session_state.loc_run = False
+    if 'cen_run' not in st.session_state:
+        st.session_state.cen_run = False
+
     c1, c2, c3 = st.columns(3)
     
     # Federated
@@ -97,6 +106,9 @@ with tab2:
         if st.button("Run Federated Model"):
             with st.spinner('Simulating distributed training...'):
                 time.sleep(2)
+            st.session_state.fed_run = True
+            
+        if st.session_state.fed_run:
             st.success("Training Complete")
             st.metric("Output Accuracy", "94.2%")
             st.metric("Model Loss", "0.21")
@@ -107,6 +119,9 @@ with tab2:
         if st.button("Run Local Model"):
             with st.spinner('Simulating local training...'):
                 time.sleep(1.5)
+            st.session_state.loc_run = True
+            
+        if st.session_state.loc_run:
             st.warning("Training Complete (Overfitted to local data)")
             st.metric("Output Accuracy", "78.5%")
             st.metric("Model Loss", "0.65")
@@ -117,10 +132,12 @@ with tab2:
         if st.button("Run Centralized Model"):
             with st.spinner('Simulating centralized training...'):
                 time.sleep(2.5)
+            st.session_state.cen_run = True
+            
+        if st.session_state.cen_run:
             st.success("Training Complete")
             st.metric("Output Accuracy", "95.8%")
             st.metric("Model Loss", "0.15")
-
 
 # --- SCREEN 3: DIAGNOSTIC PORTAL ---
 with tab3:
